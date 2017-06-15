@@ -104,6 +104,11 @@ if has('nvim')
           \ if executable('tclsh') |
           \   call neoterm#repl#set('tclsh') |
           \ endif
+    " SQL
+    au FileType sql
+          \ if executable('pgcli') |
+          \   call neoterm#repl#set('pgcli') |
+          \ endif
     " Standard ML (SML)
     au FileType sml
           \ if executable('sml') |
